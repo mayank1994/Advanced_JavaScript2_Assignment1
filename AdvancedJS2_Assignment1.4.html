@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<title> Advanced JavaScript2: Assignment1.4 </title>
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		function Person(name, age){ 
+		
+		  this.name = name;
+		  this.age = age; 
+		}
+		
+		Person.prototype.name=function(){
+			alert("Name of person is"+ this.name);
+			alert("Age:"+this.age);
+		}
+		var personobj = new Person("Mayank","21");
+				
+		function student(){
+		
+		}
+		student.prototype=personobj;
+		student.prototype.col = "IIIT Delhi" ;
+		student.prototype.roll = "2012057" ;
+		
+		student.prototype.changedetails = function(){
+			var a=prompt("Enter the name","");
+			var b=prompt("Enter the age","" );
+			var c=prompt("Enter the college","");
+			var d=prompt("Enter the roll number","" );
+			this.name=a;
+			this.age=b;
+			this.col=c;
+			this.roll=d;
+		}
+		student.prototype.display=function(){
+			document.write("<b>NAME</b> : " + this.name + "<br>");
+			document.write("<b>AGE</b> : " + this.age + "<br>");
+			document.write("<b>COLLEGE</b> : " + this.col + "<br>");
+			document.write("<b>ROLL NUMBER</b> : " + this.roll + "<br><br>");
+			
+			var d=prompt("Do you wish to continue?(y/n)","");
+			if(d === "y"){
+				this.changedetails();
+				this.display();
+			}else if(d=="n"){
+			} else {
+				document.write("Invalid Entry(Enter y/n)" + "<br>");
+				this.display();
+			}
+			document.write("<br>");
+		}
+		var student1= new student();
+		student1.display();
+		
+		
+	</script>
+	
+</body>
+
+</html>
