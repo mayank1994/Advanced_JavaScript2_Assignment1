@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<title> Advanced JavaScript2: Assignment1.3</title>
+
+
+<body>
+<script type="text/javascript">
+
+		function details(){
+			var veh=new Vehicle();
+		}
+				
+		function Vehicle(){
+
+			var company=prompt("Enter the company of vehicle" );
+			this.company=company;
+
+			var model=prompt("Enter the model of vehicle" );
+			this.model=model;
+
+			var year=prompt("Enter the year of vehicle" );
+			this.year=year;
+
+			var licnum=prompt("Enter the licnum of vehicle" );
+			this.licnum=licnum;
+
+			var colour=prompt("Enter the colour of vehicle" );
+			this.colour=colour;
+			
+			function display(company,year,model,licnum,colour){
+				document.write(" Vehicle company: " + company + "<br><br>");
+				document.write(" Vehicle purchase year: " + year + "<br><br>");
+				document.write(" Vehicle Model : " + model + "<br><br>");
+				document.write(" License Plate Number : " +  licnum + "<br><br>");
+				document.write(" Vehicle Colour : " +  colour + "<br><br>");
+			}
+
+
+			display(this.company,this.year,this.model,this.licnum,this.colour);
+		}
+
+		
+				
+	</script>
+	
+	<button onclick="details()" position="fixed"> Vehicle Details </button>
+	
+</body>
+
+</html>

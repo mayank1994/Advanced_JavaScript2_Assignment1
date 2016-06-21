@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced JavaScript2: Assignment1.1</title>
+
+
+	<script type="text/javascript">
+	
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+var mycar = new Car("Audi", "R8", 2016);
+var mycar = new Car("Lamborghini", "Hurracan", 2014);
+
+(function (){
+			var Audi=new Car('Audi','R8',2016);
+			var Lamborghini=new Car('Lamborghini','Hurracan',2014);
+			alert(Audi.make);
+			alert(Audi.model);
+			alert(Audi.year);
+			alert(Lamborghini.make);
+			alert(Lamborghini.model);
+			alert(Lamborghini.year);
+		})();
+
+
+</script>
+</head>
+
+<body onload="">
+
+</body>
+</html>
